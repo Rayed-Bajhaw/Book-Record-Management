@@ -1,0 +1,26 @@
+{
+  "name": "book-record-management",
+  "version": "1.0.0",
+  "description": "Library System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rayed-Bajhaw/Book-Record-Management.git"
+  },
+  "author": "rayed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rayed-Bajhaw/Book-Record-Management/issues"
+  },
+  "homepage": "https://github.com/Rayed-Bajhaw/Book-Record-Management#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
