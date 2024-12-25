@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 function DbConnection() {
   const DB_URL = process.env.MONGO_URI;
 
-  mongoose.connect(DB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  // mongoose.connect(DB_URL, {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,  // /// these both are now no need to right in latest version
+  // });
+  mongoose.connect(DB_URL);
 }
 
 const db = mongoose.connection;
