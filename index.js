@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const DbConnection = require("./databaseConnection");
 
 const userRouter = require("./routes/users");
-const bookRouter = require("./routes/books"); //we can alco write books.js
+const bookRouter = require("./routes/books"); //we can also write books.js
 
 dotenv.config();
 const app = express();
