@@ -1,8 +1,7 @@
 // Data Transfer Object - Book
 
 class IssuedBook {
-  // class name always start with uppercase
-  _id; // _id is a special keyword for auto generated id
+  _id;
   name;
   genre;
   price;
@@ -11,9 +10,7 @@ class IssuedBook {
   issuedDate;
   returnDate;
 
-  // whenever create obj, the constructor gets invoked = parameterized constructor
   constructor(user) {
-    // in js we dont write class name with constructor
     this._id = user.issuedBook._id;
     this.name = user.issuedBook.name;
     this.genre = user.issuedBook.genre;

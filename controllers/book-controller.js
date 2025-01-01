@@ -1,11 +1,8 @@
-const { UserModel, BookModel } = require("../models"); // by default it will go with /index  // UserModel,BookModel are tables
-// const issuedBook = require("../dtos/book-dto");
+const { UserModel, BookModel } = require("../models");
 const IssuedBook = require("../dtos/book-dto");
 
-// const getAllBooks = () => {};
 exports.getAllBooks = async (req, res) => {
-  // async await will be used because connecting to database will take time
-  const books = await BookModel.find(); // find() is mongodb method
+  const books = await BookModel.find();
 
   if (books.length === 0) {
     return res.status(404).json({
@@ -60,7 +57,7 @@ exports.addNewBook = async (req, res) => {
       message: "No data to add a book",
     });
   }
-  await BookModel.create(data); // create is a query to create new row in database
+  await BookModel.create(data);
   const allBooks = await BookModel.find();
 
   return res.status(201).json({
@@ -88,5 +85,3 @@ exports.updateBookBYId = async (req, res) => {
     data: updatedBook,
   });
 };
-
-// module.exports = { getAllBooks, getSingleBookById };  // no need of this if using exports.getAllBooks = () => {};

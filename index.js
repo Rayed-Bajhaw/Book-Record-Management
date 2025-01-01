@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const DbConnection = require("./databaseConnection");
 
 const userRouter = require("./routes/users");
-const bookRouter = require("./routes/books"); //we can +98als1o write books.js
+const bookRouter = require("./routes/books");
 
 dotenv.config();
 const app = express();
@@ -25,7 +25,6 @@ app.use("/users", userRouter); // all url start with /users is passed to users.j
 app.use("/books", bookRouter); // all url start with /books is passed to books.js file
 
 app.get("*", (req, res) => {
-  //allways keep generic condition on bottom otherwise it will execute first
   res.status(404).json({
     message: "this root is not present",
   });

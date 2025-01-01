@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema; // Schema is a chall name S should be in upper case
+const Schema = mongoose.Schema;
 
 const bookSchema = new Schema(
   {
-    // id will be auto generated in Mongo DB
     name: {
       type: String,
       required: true,

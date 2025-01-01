@@ -33,21 +33,6 @@ exports.getSingleUserById = async (req, res) => {
 };
 
 exports.createNewUser = async (req, res) => {
-  // const { data } = req.body;
-  // if (!data) {
-  //   res.status(404).json({
-  //     success: false,
-  //     message: "No data to create a user",
-  //   });
-  // }
-  // const user = await UserModel.create(data);
-  // const allUsers = await UserModel.find();
-
-  // return res.status(201).json({
-  //   success: true,
-  //   message: "User created successfully",
-  //   data: allUsers,
-  // });
   const { id, name, surname, email, subscriptionType, subscriptionDate } =
     req.body;
 
@@ -76,7 +61,7 @@ exports.updateUserData = async (req, res) => {
         ...data,
       },
     },
-    { new: true } //to reload with latest data
+    { new: true }
   );
   return res.status(200).json({
     success: true,
@@ -101,7 +86,6 @@ exports.deleteUser = async (req, res) => {
 
 exports.getSubscriptionDetailsById = async (req, res) => {
   const { id } = req.params;
-  // find({_id:id})
   const user = await UserModel.findById(id);
 
   if (!user) {
